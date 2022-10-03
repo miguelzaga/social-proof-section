@@ -25,4 +25,13 @@
     padding: 0 5px;
     margin-bottom: 39px;
   }
+
+  &__ratings {
+  }
+
+  &__rating {
+    &-star {
+      max-width: 16.5px;
+    }
+  }
 }
