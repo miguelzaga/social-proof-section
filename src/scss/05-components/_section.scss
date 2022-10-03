@@ -27,9 +27,23 @@
   }
 
   &__ratings {
+    margin-bottom: 49px;
   }
 
   &__rating {
+    background-color: $light-grayish-magenta;
+    border-radius: 8px;
+    text-align: center;
+    padding: 16px 0 15px;
+    margin: 16px 0;
+
+    &-stars {
+      display: flex;
+      justify-content: center;
+      gap: 8.45px;
+      margin-bottom: 15.2px;
+    }
+
     &-star {
       max-width: 16.5px;
     }
