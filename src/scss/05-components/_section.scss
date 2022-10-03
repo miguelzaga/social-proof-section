@@ -27,6 +27,9 @@
   }
 
   &__ratings {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 16px;
     margin-bottom: 49px;
     font-weight: 700;
     font-size: rem(17px);
@@ -39,7 +42,6 @@
     border-radius: 8px;
     text-align: center;
     padding: 16px 0 15px;
-    margin: 16px 0;
 
     &-stars {
       display: flex;
@@ -50,6 +52,48 @@
 
     &-star {
       max-width: 16.5px;
+    }
+  }
+
+  &__reviews {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 16px;
+    color: white;
+  }
+
+  &__review {
+    background-color: $very-dark-magenta;
+    border-radius: 8px;
+    padding: 40px 32px 35px;
+    font-size: rem(17px);
+
+    &-profile {
+      display: flex;
+      align-items: center;
+      gap: 23px;
+      margin-bottom: 23px;
+      line-height: 16px;
+    }
+
+    &-img {
+      max-width: 40px;
+      border-radius: 100%;
+    }
+
+    &-name {
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    &-verified {
+      color: $soft-pink;
+    }
+
+    &-content {
+      font-weight: 500;
+      line-height: 22px;
+      letter-spacing: rem(-0.303571px);
     }
   }
 }

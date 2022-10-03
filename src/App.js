@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Stars from "./components/Stars.js";
 import ColtonImg from "/src/images/image-colton.jpg";
+import IreneImg from "/src/images/image-irene.jpg";
+import AnneImg from "/src/images/image-anne.jpg";
 
 function App() {
   var ratingAuthors = ["Reviews", "Report Guru", "BestTecth"];
@@ -15,13 +17,13 @@ function App() {
       name: "Irene Roberts",
       content:
         "Customer service is always excellent and very quick turn around. Completely delighted with the simplicity of the purchase and the speed of delivery.",
-      img: ColtonImg,
+      img: IreneImg,
     },
     {
       name: "Anne Wallace",
       content:
         "Put an order with this company and can only praise them for the very high standard. Will definitely use them again and recommend them to everyone!",
-      img: ColtonImg,
+      img: AnneImg,
     },
   ];
 
@@ -42,7 +44,7 @@ function App() {
           return (
             <li key={`author-${i}`} className="section__rating">
               <Stars />
-              {`Rated 5 Stars in ${author}`}
+              <h2>{`Rated 5 Stars in ${author}`}</h2>
             </li>
           );
         })}
@@ -52,13 +54,17 @@ function App() {
           return (
             <li key={`review-${i}`} className="section__review">
               <div className="section__review-profile">
-                <img className="section__review-img" alt="" src={review.img} />
+                <img
+                  className="section__review-img"
+                  alt={`Profile picture of ${review.name}`}
+                  src={review.img}
+                />
                 <div className="section__review-info">
-                  <b className="section__review-name">{review.name}</b>
+                  <h2 className="section__review-name">{review.name}</h2>
                   <p className="section__review-verified">Verified Buyer</p>
                 </div>
               </div>
-              <p className="section__review-content">{review.content}</p>
+              <p className="section__review-content">“ {review.content} ”</p>
             </li>
           );
         })}
