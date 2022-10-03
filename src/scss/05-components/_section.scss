@@ -1,0 +1,28 @@
+@use "./../01-abstracts/" as *;
+
+.section {
+  padding: 82px 24px 99px;
+  max-width: calc(1110px + 48px);
+
+  &__main {
+    text-align: center;
+  }
+
+  &__title {
+    font-size: rem(40px);
+    font-weight: 700;
+    line-height: 0.8;
+    letter-spacing: rem(-1.42857px);
+    color: $very-dark-magenta;
+    margin-bottom: 17px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: rem(19px);
+    line-height: 1.32;
+    letter-spacing: rem(-0.633333px);
+    padding: 0 5px;
+    margin-bottom: 39px;
+  }
+}

@@ -3,13 +3,16 @@ import { useState } from "react";
 function App() {
   return (
     <main className="section">
-      <h1 className="section__title">
-        10,000+ of our users love our products.
-      </h1>
-      <p className="section__text">
-        We only provide great products combined with excellent customer service.
-        See what our satisfied customers are saying about our services.
-      </p>
+      <div className="section__main">
+        <h1 className="section__title">
+          10,000+ of our users love our products.
+        </h1>
+        <p className="section__text">
+          We only provide great products combined with excellent customer
+          service. See what our satisfied customers are saying about our
+          services.
+        </p>
+      </div>
       <ul className="section__ratings">
         <li className="section__rating">Rated 5 Stars in Reviews</li>
         <li className="section__rating">Rated 5 Stars in Report Guru</li>
