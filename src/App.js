@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Stars from "./components/Stars.js";
+import ColtonImg from "/src/images/image-colton.jpg";
 
 function App() {
   var ratingAuthors = ["Reviews", "Report Guru", "BestTecth"];
@@ -8,16 +9,19 @@ function App() {
       name: "Colton Smith",
       content:
         "We needed the same printed design as the one we had ordered a week prior. Not only did they find the original order, but we also received it in time. Excellent!",
+      img: ColtonImg,
     },
     {
       name: "Irene Roberts",
       content:
         "Customer service is always excellent and very quick turn around. Completely delighted with the simplicity of the purchase and the speed of delivery.",
+      img: ColtonImg,
     },
     {
       name: "Anne Wallace",
       content:
         "Put an order with this company and can only praise them for the very high standard. Will definitely use them again and recommend them to everyone!",
+      img: ColtonImg,
     },
   ];
 
@@ -47,7 +51,14 @@ function App() {
         {reviews.map(function (review, i) {
           return (
             <li key={`review-${i}`} className="section__review">
-              {`${review.name} Verified Buyer ${review.content}`}
+              <div className="section__review-profile">
+                <img className="section__review-img" alt="" src={review.img} />
+                <div className="section__review-info">
+                  <b className="section__review-name">{review.name}</b>
+                  <p className="section__review-verified">Verified Buyer</p>
+                </div>
+              </div>
+              <p className="section__review-content">{review.content}</p>
             </li>
           );
         })}

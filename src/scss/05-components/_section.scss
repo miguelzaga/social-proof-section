@@ -28,6 +28,10 @@
 
   &__ratings {
     margin-bottom: 49px;
+    font-weight: 700;
+    font-size: rem(17px);
+    line-height: rem(16px);
+    color: $very-dark-magenta;
   }
 
   &__rating {
