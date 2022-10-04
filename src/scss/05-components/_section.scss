@@ -96,4 +96,21 @@
       letter-spacing: rem(-0.303571px);
     }
   }
+
+  &__bg-top,
+  &__bg-bottom {
+    width: unset;
+    position: absolute;
+    z-index: -1;
+  }
+
+  &__bg-top {
+    top: 0;
+    left: 0;
+  }
+
+  &__bg-bottom {
+    bottom: 0;
+    right: 0;
+  }
 }
