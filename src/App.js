@@ -3,6 +3,10 @@ import Stars from "./components/Stars.js";
 import ColtonImg from "/src/images/image-colton.jpg";
 import IreneImg from "/src/images/image-irene.jpg";
 import AnneImg from "/src/images/image-anne.jpg";
+import bgTopMobile from "/src/images/bg-pattern-top-mobile.svg";
+import bgTopDesktop from "/src/images/bg-pattern-top-desktop.svg";
+import bgBottomMobile from "/src/images/bg-pattern-bottom-mobile.svg";
+import bgBottoDesktop from "/src/images/bg-pattern-bottom-mobile.svg";
 
 function App() {
   var ratingAuthors = ["Reviews", "Report Guru", "BestTecth"];
@@ -69,6 +73,8 @@ function App() {
           );
         })}
       </ul>
+      <img className="section__bg-top" src={bgTopMobile} alt="" />
+      <img className="section__bg-bottom" src={bgBottomMobile} alt="" />
     </main>
   );
 }
