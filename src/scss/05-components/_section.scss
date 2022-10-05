@@ -60,19 +60,41 @@
     font-size: rem(17px);
     line-height: rem(16px);
     color: $very-dark-magenta;
+    @include breakpoint($lg) {
+      margin-bottom: 0;
+      align-items: center;
+    }
   }
 
   &__rating {
     background-color: $light-grayish-magenta;
     border-radius: 8px;
     text-align: center;
-    padding: 16px 0 15px;
+    padding: 16px 32px 15px;
+    width: 100%;
+    max-width: 445px;
+    position: relative;
+    @include breakpoint($md) {
+      display: flex;
+      gap: 32.5px;
+    }
+    @include breakpoint($lg) {
+      &:nth-child(1) {
+        right: 95px;
+      }
+      &:nth-child(2) {
+        right: 47px;
+      }
+    }
 
     &-stars {
       display: flex;
       justify-content: center;
       gap: 8.45px;
       margin-bottom: 15.2px;
+      @include breakpoint($md) {
+        margin-bottom: 0;
+      }
     }
 
     &-star {
