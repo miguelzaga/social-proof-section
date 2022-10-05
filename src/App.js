@@ -33,26 +33,28 @@ function App() {
 
   return (
     <main className="section">
-      <div className="section__main">
-        <h1 className="section__title">
-          10,000+ of our users love our products.
-        </h1>
-        <p className="section__text">
-          We only provide great products combined with excellent customer
-          service. See what our satisfied customers are saying about our
-          services.
-        </p>
+      <div className="section__top">
+        <div className="section__main">
+          <h1 className="section__title">
+            10,000+ of our users love our products.
+          </h1>
+          <p className="section__text">
+            We only provide great products combined with excellent customer
+            service. See what our satisfied customers are saying about our
+            services.
+          </p>
+        </div>
+        <ul className="section__ratings">
+          {ratingAuthors.map(function (author, i) {
+            return (
+              <li key={`author-${i}`} className="section__rating">
+                <Stars />
+                <h2>{`Rated 5 Stars in ${author}`}</h2>
+              </li>
+            );
+          })}
+        </ul>
       </div>
-      <ul className="section__ratings">
-        {ratingAuthors.map(function (author, i) {
-          return (
-            <li key={`author-${i}`} className="section__rating">
-              <Stars />
-              <h2>{`Rated 5 Stars in ${author}`}</h2>
-            </li>
-          );
-        })}
-      </ul>
       <ul className="section__reviews">
         {reviews.map(function (review, i) {
           return (
