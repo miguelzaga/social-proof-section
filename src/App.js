@@ -6,7 +6,7 @@ import AnneImg from "/src/images/image-anne.jpg";
 import bgTopMobile from "/src/images/bg-pattern-top-mobile.svg";
 import bgTopDesktop from "/src/images/bg-pattern-top-desktop.svg";
 import bgBottomMobile from "/src/images/bg-pattern-bottom-mobile.svg";
-import bgBottoDesktop from "/src/images/bg-pattern-bottom-mobile.svg";
+import bgBottomDesktop from "/src/images/bg-pattern-bottom-desktop.svg";
 
 function App() {
   var ratingAuthors = ["Reviews", "Report Guru", "BestTecth"];
@@ -75,8 +75,14 @@ function App() {
           );
         })}
       </ul>
-      <img className="section__bg-top" src={bgTopMobile} alt="" />
-      <img className="section__bg-bottom" src={bgBottomMobile} alt="" />
+      <picture>
+        <source srcset={bgTopDesktop} media="(min-width: 1024px)" />
+        <img className="section__bg-top" src={bgTopMobile} alt="" />
+      </picture>
+      <picture>
+        <source srcset={bgBottomDesktop} media="(min-width: 1024px)" />
+        <img className="section__bg-bottom" src={bgBottomMobile} alt="" />
+      </picture>
     </main>
   );
 }
